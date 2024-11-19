@@ -349,4 +349,8 @@ img {
   color: var(--cloud-color);
   max-width: 264px;
 }
+
+.footer > a {
+  display: inline-block;
+}
 /* #endregion */
