@@ -123,6 +123,11 @@ img {
   gap: 48px;
 }
 
+.container-team,
+.container-portfolio{
+  flex-direction: column;
+}
+
 .container-footer {
   flex-direction: column;
 }
