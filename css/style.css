@@ -10,7 +10,7 @@
   --gap: 24px;
 }
 
-/* #region Normalize */
+/* #region NORMALIZE */
 a {
   text-decoration: none;
 }
@@ -40,7 +40,7 @@ img {
 }
 /* #endregion */
 
-/* #region Setting */
+/* #region SETTING */
 .body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -63,38 +63,72 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.section-title {
+  color: var(--navy-blue-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  margin-bottom: 72px;
+}
+
+.item-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue-color);
+
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.item-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
 /* #endregion */
 
+/* #region CONTAINER */
 .container {
   max-width: 1158px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
 }
 
-.container-main {
+.container-benefits {
   flex-direction: column;
 }
 
-.container--hero {
+.container-hero {
   flex-direction: column;
-  gap: 48px;
   align-items: center;
+  gap: 48px;
 }
 
 .container-footer {
-  padding: 100px 0;
   flex-direction: column;
-  gap: 16px;
 }
+/* #endregion */
 
-.header {
-  border-bottom: 1px solid var(--cornflower)
-}
-
+/* #region LOGO */
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -107,6 +141,11 @@ img {
   margin-right: 76px;
 }
 
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .logo-dark {
   color: var(--navy-blue-color);
 }
@@ -115,23 +154,22 @@ img {
   color: var(--cloud-color);
 }
 
+/* #endregion */
+
+/* #region HEADER */
+.header {
+  border-bottom: 1px solid var(--cornflower)
+}
+
 .header-link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap);
-}
-
 .nav {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .nav-list {
@@ -141,6 +179,7 @@ img {
 .nav-link {
   color: var(--navy-blue-color);
   font-weight: 500;
+  padding: 24px 0;
 }
 
 .nav-link:hover {
@@ -175,6 +214,9 @@ img {
   color: var(--hover-color);
 }
 
+/* #endregion */
+
+/* #region HERO */
 .hero-section {
   background-color: var(--navy-blue-color);
   color: var(--white-color);
@@ -218,6 +260,9 @@ img {
   background-color: var(--hover-color);
 }
 
+/* #endregion */
+
+/* #region BENEFITS */
 .benefits-item {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -225,6 +270,13 @@ img {
   width: calc((100% - 3 * var(--gap)) / 4);
 }
 
+.benefits-title {
+  text-align: start;
+}
+
+/* #endregion */
+
+/* #region TEAM */
 .team-section {
   background-color: var(--cloud-color);
 
@@ -250,41 +302,9 @@ img {
   text-align: center;
 }
 
-.section-title {
-  color: var(--navy-blue-color);
+/* #endregion */
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-
-  margin-bottom: 72px;
-}
-
-.item-title {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue-color);
-
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.item-content {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-}
-
-.benefits-item > .item-title {
-  margin-top: 0;
-}
-
+/* #region PORTFOLIO */
 .portfolio-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -301,11 +321,17 @@ img {
   margin-left: 16px;
 }
 
+/* #endregion */
+
+/* #region FOOTER */
+
 .footer {
   background-color: var(--navy-blue-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-.footer-content {
+.content-footer {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -314,3 +340,5 @@ img {
   color: var(--cloud-color);
   max-width: 264px;
 }
+
+/* #endregion */
