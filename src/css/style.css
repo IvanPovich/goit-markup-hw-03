@@ -5,10 +5,44 @@
   --cloud-color: #f4f4fd;
   --navy-blue-color: #2e2f42;
   --slate-color: #434455;
+  --cornflower: #e7e9fc;
+
+  --gap: 24px;
 }
 
+/* #region Normalize */
+a {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* #endregion */
+
+/* #region Setting */
 .body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   letter-spacing: 0.02em;
   font-size: 16px;
@@ -16,16 +50,45 @@
   color: var(--slate-color);
 }
 
-a {
-  text-decoration: none;
+.offscreen {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* #endregion */
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.list {
-  list-style: none;
+.container-main {
+  padding: 120px 0;
+  flex-direction: column;
+}
+
+.container--hero {
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.container-footer {
+  padding: 100px 0;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -35,11 +98,16 @@ a {
   color: var(--iris-color);
 }
 
-.logo-header {
+.logo-footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo-dark {
   color: var(--navy-blue-color);
 }
 
-.logo-footer {
+.logo-white {
   color: var(--cloud-color);
 }
 
@@ -47,6 +115,24 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  margin-left: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  gap: 40px;
 }
 
 .nav-link {
@@ -66,6 +152,12 @@ a {
   font-style: normal;
 }
 
+.contacts-list {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 40px;
+}
+
 .contact-link {
   font-style: normal;
   font-weight: 400;
@@ -80,22 +172,22 @@ a {
   color: var(--hover-color);
 }
 
-.main-section {
+.hero-section {
   background-color: var(--navy-blue-color);
   color: var(--white-color);
   text-align: center;
 }
 
-.main-title {
+.hero-title {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
 
-  text-align: center;
+  width: 496px;
 }
 
-.main-button {
+.hero-button {
   background-color: var(--iris-color);
   color: var(--white-color);
 
@@ -104,15 +196,25 @@ a {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
+  width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+
   cursor: pointer;
 }
 
-.main-button:hover {
+.hero-button:hover {
   background-color: var(--hover-color);
 }
 
-.main-button:focus {
+.hero-button:focus {
   background-color: var(--hover-color);
+}
+
+.benefits-item {
+  text-align: left;
+  width: calc((100% - 3 * var(--gap)) / 4);
 }
 
 .team-section {
@@ -122,10 +224,10 @@ a {
 .item-team {
   background-color: var(--white-color);
   text-align: center;
-}
 
-.benefits-item {
-  text-align: left;
+  height: 380px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px 0px #2e2f4214;
 }
 
 .section-title {
@@ -137,6 +239,8 @@ a {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
+
+  margin-bottom: 72px;
 }
 
 .item-title {
@@ -145,6 +249,9 @@ a {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+
+  margin-bottom: 8px;
+  margin-top: 32px;
 }
 
 .item-content {
@@ -152,6 +259,21 @@ a {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.02em;
+}
+
+.benefits-item > .item-title {
+  margin-top: 0;
+}
+
+.portfolio-item {
+  height: 420px;
+  border: 1px solid var(--cornflower);
+  width: calc((100% - 2 * var(--gap)) / 3);
+}
+
+.portfolio-item > .item-title,
+.portfolio-item > .item-content {
+  margin-left: 16px;
 }
 
 .footer {
@@ -165,4 +287,5 @@ a {
   letter-spacing: 0.02em;
   text-align: left;
   color: var(--cloud-color);
+  max-width: 264px;
 }
