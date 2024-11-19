@@ -59,9 +59,10 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
+
   white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
   overflow: hidden;
 }
 
@@ -144,7 +145,6 @@ img {
   text-transform: uppercase;
 
   color: var(--iris-color);
-  display: inline-block;
 }
 
 .logo-header {
@@ -152,6 +152,7 @@ img {
 }
 
 .logo-footer {
+  display: inline-block;
   margin-bottom: 16px;
 }
 
