@@ -8,6 +8,8 @@
   --cornflower: #e7e9fc;
 
   --gap: 24px;
+  --grid_4: calc((100% - 72px) / 4);
+  --grid_3: calc((100% - 48px) / 3);
 }
 
 /* #region NORMALIZE */
@@ -54,15 +56,14 @@ img {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
-  
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  margin: 0;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
+
 
 .list {
   display: flex;
@@ -90,7 +91,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
 
-  text-align: center;
   margin-bottom: 8px;
 }
 
@@ -138,6 +138,9 @@ img {
   text-transform: uppercase;
 
   color: var(--iris-color);
+}
+
+.logo-header {
   margin-right: 76px;
 }
 
@@ -263,11 +266,13 @@ img {
 /* #endregion */
 
 /* #region BENEFITS */
+.benefits-section {
+  padding: 120px 0;
+}
+
 .benefits-item {
-  padding-top: 120px;
-  padding-bottom: 120px;
   text-align: left;
-  width: calc((100% - 3 * var(--gap)) / 4);
+  width: var(--grid_4);
 }
 
 .benefits-title {
@@ -289,13 +294,13 @@ img {
   text-align: center;
 
   height: 380px;
+  width: var(--grid_4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px 0px #2e2f4214;
 }
 
 .employee_inform {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
 }
 
 .employee_position {
@@ -310,15 +315,19 @@ img {
   padding-bottom: 120px;
 }
 
-.portfolio-item {
-  height: 420px;
-  border: 1px solid var(--cornflower);
-  width: calc((100% - 2 * var(--gap)) / 3);
+.portfolio-list {
+  row-gap: 48px;
 }
 
-.portfolio-item > .item-title,
-.portfolio-item > .item-content {
-  margin-left: 16px;
+.portfolio-item {
+  height: 420px;
+  width: var(--grid_3);
+}
+
+.portfolio-info {
+  padding: 32px 16px;
+  border: 1px solid var(--cornflower);
+  border-top: none;
 }
 
 /* #endregion */
@@ -331,7 +340,7 @@ img {
   padding-bottom: 100px;
 }
 
-.content-footer {
+.footer-content {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -340,5 +349,4 @@ img {
   color: var(--cloud-color);
   max-width: 264px;
 }
-
 /* #endregion */
